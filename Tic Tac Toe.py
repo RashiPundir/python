@@ -16,22 +16,18 @@ def playgame():
     global checking
     if even == 0:
         display()
-    winner_rows()
-    if winner == 'p1' or winner == 'p2':
-        end()
+    print(player+"chance")
+    print("Select your position")
+    move = int(input())
+    check()
+    if player == "p1":
+        chancep1 = True
+        chancep2 = False
+        chance()
     else:
-        print(player+"chance")
-        print("Select your position")
-        move = int(input())
-        check()
-        if player == "p1":
-            chancep1 = True
-            chancep2 = False
-            chance()
-        else:
-            chancep1 = False
-            chancep2 = True
-            chance()
+        chancep1 = False
+        chancep2 = True
+        chance()
 
 def chance():
     global even
