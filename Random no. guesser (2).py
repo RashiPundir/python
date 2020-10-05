@@ -6,17 +6,18 @@ i = random.randint(1,10)
 trys=0
 while trys<5:
     print("Now try guessing")
-    nos = int(input())
+    number= int(input())
     trys += 1
-    if nos > i:
+    if number > i:
         print("You guessed too high")
-    if nos < i:
+    if number < i:
         print("You guessed too low")
-    if nos == i:
+    if number == i:
         break
-if nos == i:
-    print("You guessed the no. right. The no. was:",nos)
+if number != i:
+    print("You Loose the no. was:",number)
+if number == i:
+    print("You guessed the no. right. The no. was:",number)
     print("You took",trys,"trys")
-if nos != i:
-    print("You Loose the no. was:",nos)
+    
 
